@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    css- cascading style sheets
+    What is css?
+    It  is used to describes the presentation of a html document
+    it deals with colors,text,fonts,backgrounds,animation,layouts and media quries 
+    
+How to insert css
+1)inline css
+styyles are add to the html element itself by using style attribute
+<h1 style='color:red;' >inline content</h1>
+2)internal css
+styles are added to the document using style tag
+<style></style>
+selectors
+it is used to target the html elements for applying styles
+syntax:
+selector{
+declaration
+property:value;
+}
+h2{
+color:green;
+}
+3) external css
+ external css styles are defined in external file that has.css extension
+  high specificity-high importance 
+  types of selectors:
+  1)simple selectorss
+  a)element selector or tagname selector
+  style will be applied based on a elemnt
+  h1{
+  color:red;
+  }
+  b)class selector
+  it is denoted with .classname
+  it is used to apply styles to the multiple elements
+  we can take 
+  c) id selector
+  it is denoted by #idname
+  it is used to apply styles
+  2)combinators
+  3)pseudo class
+  4)attribute
+
+  specificity in selector:
+  1) id having high specificity
+  2) class having high
+  box model
+  it describes the presentation of an element
+            1)content
+            width 
+            height
+            2) padding 
+             it  is the space around the content\padding:20px
+             padding:10px 20px 30px 40p
+             padding: 10px 20[x 30px  40px
+             top right bottom
+             border
+             It is the line around the padding
+             border:  1px solid back;
+             style--solid 
+                    double
+                    dashed
+                    dotted
+                    ridge
+                    groove
+                    radius
+                    none
+                    broder=radius:20px;
+                    margin:
+                    it is the space around the element or between boarder
+
+    -->
+<link rel="stylesheet" href="demo.css">
+    <style>
+        h2{
+            color: green;
+        }
+        .title{
+            color: green;
+            background-color: rgb(232, 220, 255);
+            width:50%;
+            height: 200px;
+            padding: 50px;
+            border: 10px solid black;
+            border-radius: 20px;
+            margin: 20px;
+            margin: 30px;
+            display:inline-block;
+            background-image:url('https://images.unsplash.com/photo-1631631480669-535cc43f2327?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-size:contain;
+            background-size:100% 100%;
+        }
+        #el1{
+            color: rgb(255, 55, 20);
+        }
+div{
+            background-color: darkgoldenrod;
+            width: 75%;
+            height: 30px;
+            padding: 10px;
+            margin: 20px;
+
+        }
+        span{
+            background-color: dimgrey;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            margin: 30px;
+            
+
+        }
+    </style>
+</head>
+<body>
+
+    <div>block level <span>inline elements</span>elements</div>
+    <h1>inline content</h1>
+    <h2 class="title" id="el1">internal content <p style="color: black;"></h2>
+    <h2 class="title" id="el1">internal content <p style="color: black;"></h2>
+
+
+    <h3 class="title title2">external content</h3>
+
+  
+</body>
+</html>
+        
