@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <!-- Static websites
+     dynamic websites
+     features
+     ---------------
+     addtocart
+     filters
+     sorting
+     form validations
+     crud
+
+     what is javascript:
+     --------------------------
+     javascript is ahighlevel interpretted programming language
+     that is used to create dynamic nature to the website
+     it was introduced in 1991 by brenden eich
+
+     versions:
+     -----------
+     es1
+     es2
+     es3
+     es4
+     es5 ---Most used---pre requestic
+     How to insert Javascript:
+     ----------------------------
+     1)inline
+     <button onclick='console.log(inline js)'>click me</button>
+     2)internal
+     <script>
+        console.log('internal js')
+     3)external
+
+
+     Concepts in javascript:
+     ---------------------------
+     Operators
+     Variables:
+     ---------------
+     variables are like container which is used to atore the data and data could be anything
+     variables are defined with var,let,and const keyword followed by variable name follwed by value
+     var a=10;
+     let b=20;
+     const c=30;
+     console.log(a,b,c)
+     variable terms
+     variable declaration
+     var a;
+
+     undefined
+     ----------------
+     console.log(a,b,c)
+
+     Assignment
+     -------------
+     var b;
+     b=20;
+     initialization
+     -------------------
+     var c=30;
+
+     not defined
+     ---------------
+     console.log(d)//unexsiting variable
+
+     Hoisting(imp)
+     -------------
+    Hoisting is a behaviour of the javascript where the declaration of  a variable and function are moved to top even before the execution
+     datatypes
+     ----------------
+     primitive datatypes: which  stores the single value .which are immutabe .which stores in stack
+   1) Strings
+   It is a collection of charaters that are enclosed in ''," ", ``
+   strings are immutable
+   var s='hello world'
+   console.log(s[0])
+   s[0]='z'
+   console.log(s)
+   numbers:
+   -----
+   var n=10;
+   var m=-11;
+   var num=11.2;
+   console.log(n,m,num)
+   3)boolean
+   ----------------
+   true or false
+   var isadmin=true
+   var isadmin=false;
+   var membership=true;
+   var isactive=true;
+   console.log(isadmin)
+   4)undefined
+   var a
+   console.log(a)
+   5)null
+   it is a intentional absece of a value
+   var id=null
+   var empname=null
+   console.log(id+10)
+     non primitive datatypes
+     which stores multiple values
+     which are mutable 
+
+     1)arrays
+     It is used to sstore multiple values in a single variable it is stores both homogeneous and heterogeneous
+     It can access via index
+     var arr=[1,true.'hello']
+     console.log(arr)
+     console.log(arr[2])
+   Objects:
+   It is used to collection of data in key value pairs
+   functions:
+   -------------
+   functions greet(){
+   console.log('hello world')
+   greet()
+   }
+     conditional statements
+     loops
+     -----------
+     types of loops
+     -------------------
+     1.for loop-: counter loop -when we know the iteration
+   ----------------------------------------------------------
+     for(initialization;condition;update){
+     // block of code
+     }
+     for(let i=1;i<=10;i++){
+     console.log(i)
+     }
+     2.while loop:
+     -------------------
+    It is also called event controlled loop -when the iteration are not known
+     while(true){
+     console.log()
+     }
+     3.do-while
+     ---------------
+      syntax:
+      let i=1
+      do{
+      console.log(i)
+      i++
+      }while(i%2==0)
+     4.for in:
+     -----------------
+     It is used to iterate the object ,arrayand strings
+     it will get the keys and indexes
+     Example:
+     let arr=['html','css','java']
+    for(let i in arr){
+    console.log(i)//indexes
+    console.log(arr[i])//values 
+}
+    5. for of:
+    ------------------
+    It is used to get an array
+    Example:
+    let arr=['html','css','js']
+    for (let i of arr){
+    console.log(i)//values
+    }
+
+     for out:
+     -----------------
+     It is used only values
+     continue:
+     ---------------
+     let data=[
+    {productid:5,status:'Notexpired'},
+    {productid:45,status:'expired'},
+    {productid:345,status:'Notexpired'},
+    {productid:234345,status:'expired'}
+    ]
+    for(let i in data){
+        if(i.status=='expired'){
+            continue
+        }
+        console.log(i)
+    }
+    break:
+    -----------
+    It is used to terminate the block of code when interpreter touches the break
+
+    Functions:
+    ----------------
+    functions are block of reusable code that is used to perform a particular action when something invokes it.
+    fuctions are defined with functions keyword follwed by by function name follwed by () may include parameters follwed by block of code
+    //fuction definition or declaration
+    function greet(){
+    console.lig('hello')
+    }
+    //function calling or invoking 
+    greet()
+    pointas in functions:
+    1.function name stores function definition
+    2. Return
+    It is used to store the value of a function
+    It is used to terminate the fuction block3)
+  3) statements after return will not be executed
+  4)named functions can only be hoisted 
+  we can eliminate return if their is a single statement let arrowfun=(a,b)=>a+b
+  we can eliminate () if there is a single parameters
+  
+  let arrrowfun=(a,b)=>a+b
+  function sum(a,b){
+  return a+b
+  }
+   function sum(a,b){
+   return a+b
+     }
+   let val=sum(2,3)
+   console.log(val)
+   }
+   Anonymouse function:
+   -----------------------
+   function(){
+   console.log('hello world')
+   }
+   an()
+ callback function:
+ callback function is when a function definition is passed to another as an argument and later executes on outer function
+ addtocart  --------------payment--------order
+function addtocart(callback){
+console.log('products added to cart')
+}
+fuction payment(callback){
+  setTimeout(()=>{
+  console.log('payment completed')
+  callback()
+     },7000)
+  }
+     function order(){
+     console.log('order placed')
+     }
+     addtocart(payment)
+
+}
+     closures:
+     cloures is when a function having access and can able to change the variable
+     which is declared in outer function even after the exection 
+     function outer(){
+     let count =0
+      console.log('outer function is executed')
+      return function(){
+      console.log('inner function exeuted')
+      return function (){
+      count++
+      console.log(count)
+      console.log('inner function executed')
+      }
+     }
+
+     DOM
+     -----------
+     It is  
+     asynchronous concept
+     callback 
+      -->
+    <!-- <button onclick='console.log("inline js")'>click me</button> -->
+    <!-- <script>
+        console.log('internal js')
+     </script>
+     <script src="demo.js">
+
+     </script>-->
+    <!-- <script>
+      var a = 10;
+      let b = 20;
+      const c = 30;
+      console.log(a, b, c)
+    </script>  -->
+    <script>
+      //   var a;
+      //   console.log(a);
+
+      //   var b = 20;
+      //   b = 20;
+      //   console.log(b);
+
+      //   var c = 30;
+      //   console.log(c);
+      //       var s = "hello world";
+      //       console.log(s[0]);
+      //       s[0] = "z";
+      //       console.log(s);
+      //       var n = 10;
+      //       var m = -11;
+      //       var num = 11.2;
+      //       console.log(n, m, num);
+      //       var isadmin = true;
+      //       var isadmin = false;
+      //       var membership = true;
+      //       var isactive = true;
+      //       console.log(isadmin, membership);
+      //       var arr = [1, true, "hello"];
+      //       console.log(arr);
+      //       console.log(arr[2])
+      //       arr[2]='hello world'
+      //       console.log(arr)
+      //       let data=[2,25,3]
+      //       let obj={
+      //         batchno:2,
+      //         batchcount:25,
+      //         java:3
+      //       }
+
+      //       function greet(){
+      //    console.log('hello world')
+      //    greet()
+
+      //    }
+      //   numbers
+      //   var a = 10;
+      //   let b = 20;
+      //   const c = 30;
+      //   console.log(a, b, c);
+      //   // Strings
+      //   var s = "hello Purnima";
+      //   console.log(s);
+      //   //    boolean
+      //   var isactive = true;
+      //   console.log(isactive);
+      //   //    arrays
+      //   var arr = [1, 2, 3];
+      //   console.log(arr);
+      // var marks =prompt('enter a marks')
+      // var grade = ''
+      // if (marks > 80) {
+      //   grade = "a";
+      // } else if (marks > 60) {
+      //   grade = "b"
+      // } else {
+      //   grade = "f"
+      // }
+      // let container = document.getElementById("container")
+      // container.innerHTML = `your grade is<h1>${grade}</h1>`
+      // for (let i = 1; i <= 10; i++) {
+      //   console.log(i);
+      // }
+      //    function greet(name){
+      // console.log(`hello ${name}`)
+      // }
+      //function calling or invoking
+      // greet('john')
+      // greet('jack')
+      // greet('purni')
+      // let students = [
+      //
+      //
+      // 
+      function outer(){
+     let count =0
+      console.log('outer function is executed')
+      return function(){
+      console.log('inner function exeuted')
+      return function (){
+      count++
+      console.log(count)
+      console.log('inner function executed')
+      }
+     }
+    
+    }
+    </script>
+  </body>
+</html>
