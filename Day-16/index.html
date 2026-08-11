@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        image{
+            width: 140px;
+            height: 200px;
+        }
+        #container{
+              display:grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap:20px;
+              
+        }
+        #container>div{
+            padding: 20px;
+            box-shadow: 0px 0px 5px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+       async function getdata() {
+    let url = 'https://fakestoreapi.com/products';
+
+    let data = await fetch(url);
+    let finaldata = await data.json();
+
+    let container = document.getElementById('container');
+
+    let output = finaldata.map((val) => {
+        return `
+            <div class="card">
+                <img src="${val.image}" width="150">
+                <h3>${val.title}</h3>
+                <p>Price: $${val.price}</p>
+            </div>
+        `;
+    }).join("");
+
+    container.innerHTML = output;
+}
+
+getdata();
+                    
+                   
+            
+      
+            getdata()
+    </script>
+</body>
+</html>

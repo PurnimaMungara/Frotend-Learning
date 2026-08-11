@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        es-6 features
+        let const
+        arrow function:
+               destructuring
+               spread operator
+               localstorage
+               hof (higher order function):
+               --------------------------------
+               map method
+               ---------------
+               let arr=['html','css','js']
+              // map is to transform an array element by applying a provided function for every elemet 
+            
+                 let data=arr.map((val,ind,var)=>{
+                 console.log(val) //each value
+                 console.log(ind)  //index value
+                 })
+                 filter():
+                 -----------------
+                  filter is used to create a filtered array by applying a boolean function for every element
+                  let arr=[1,2,3,4,5,6,7,8]
+                  let data=arr.filer((var,ind,ar)=>{
+                  return val%2==0
+                  })
+                  console.log(data)
+
+              variable terms
+              variable declaration -redelaration
+              var a;
+              variable initializtion
+              var a=10;
+              assignment-reassignment
+              var a;
+              a=10
+              a=20
+              hoisting
+              console.log(a)
+              var a=10;
+              var:
+              ----------
+              var can be redelared  
+              assignment is  allowed
+              Hoisting is allowed
+              
+              let:
+              --------
+              let cannot be redelacred
+              assignment is  allowed
+              hoisting is not possible not possible because it was in tdz(temporal dead zone)
+              const:
+              ----------
+              const cannot be redeclared
+              assignment is not allowed 
+              hoisting is not possible not possible because it was in tdz(temporal dead zone)
+
+              scopes:
+              --------
+              it is the life or accessibility of a vatriable
+              global scope
+              ---------------
+              we can access variable from anywhere 
+              var,let and const have global scope
+              block scope
+              ----------------
+              we cannot access variable outside of the block
+              let and const have block scope
+              local scope
+              ---------------
+              we can access variable within the function only
+              var, let const have local scope
+
+
+
+        */
+      //    const founder='purnima'
+      //     console.log(founder)
+      //     {
+      //         var trainer='poorni'
+      //        // console.log(trainer)
+      //         console.log(founder)
+      //     }
+      //    function classroom(){
+      //     var std='john'
+      //     console.log(std)
+      //  console.log(founder)
+
+      //     }
+      //     classroom()
+
+      /* localstorage
+   
+
+*/
+      //how to store data in localstorage
+      // let name='john'
+      // localStorage.setItem("jfs2",name)
+
+      // //how to get data
+
+      // let arr=[
+      //     {name:'john',age:29},
+      //     {name:'jessy',age:23}
+      // ]
+      // localStorage.setItem("jfs2arr",JSON.stringify(arr))
+      // let arrdata=JSON.parse(localStorage.getItem('jfs2arr'))
+      // console.log(arrdata)
+      //  let arr=['html','css','js']
+      //               // map is to transform an array element by applying a provided function for every elemet
+
+      //                  let data=arr.map((val,ind,var)=>{
+      //                  console.log(val) //each value
+      //                  console.log(ind)  //index value
+      //                  })
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+      let data = arr.filer((val, ind, ar) => {
+        return val % 2 == 0;
+      });
+      console.log(data);
+      //reduces is used for calculations-it takes the array elements
+      //converts into single value by applying provided function
+      let total = data.reduce((acc, val) => {
+        return acc + val;
+      }, 0);
+      console.log(total);
+    </script>
+  </body>
+</html>
